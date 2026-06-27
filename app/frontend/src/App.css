@@ -1,0 +1,79 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0a0a0a; color: #fff; font-family: 'Inter', sans-serif; }
+
+.app { min-height: 100vh; }
+
+.app-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 40px; background: #111; border-bottom: 1px solid #222;
+}
+.app-header h1 { font-size: 1.5rem; }
+.app-header p { color: #888; font-size: 0.85rem; margin-top: 4px; }
+
+.main { padding: 40px; max-width: 1200px; margin: 0 auto; }
+
+.connect-prompt { text-align: center; padding: 60px 0; }
+.connect-prompt h2 { font-size: 1.8rem; margin-bottom: 12px; }
+.connect-prompt p { color: #888; }
+
+.markets-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px;
+}
+
+.market-card {
+  background: #111; border: 1px solid #222; border-radius: 16px; padding: 24px;
+  transition: border-color 0.2s;
+}
+.market-card:hover { border-color: #444; }
+
+.match-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+}
+.team { font-size: 1.1rem; font-weight: 600; }
+.vs { color: #666; font-size: 0.9rem; }
+
+.fixture-id { color: #555; font-size: 0.75rem; margin-bottom: 16px; }
+
+.no-market { text-align: center; padding: 20px 0; color: #666; }
+
+.market-stats {
+  display: flex; gap: 12px; align-items: center; margin-bottom: 16px;
+  font-size: 0.85rem; flex-wrap: wrap;
+}
+.outcome { color: #4ade80; }
+.pool { color: #facc15; margin-left: auto; }
+
+.pool-bars { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.pool-bar {
+  display: flex; justify-content: space-between; padding: 8px 12px;
+  background: #1a1a1a; border-radius: 8px; font-size: 0.85rem;
+}
+
+.bet-section { margin-bottom: 16px; }
+.bet-input {
+  width: 100px; padding: 8px 12px; background: #1a1a1a; border: 1px solid #333;
+  border-radius: 8px; color: #fff; font-size: 0.9rem; margin-right: 8px;
+}
+.sol-label { color: #888; font-size: 0.85rem; }
+.bet-buttons { display: flex; gap: 8px; margin-top: 12px; }
+
+.btn {
+  padding: 10px 16px; border: none; border-radius: 8px; cursor: pointer;
+  font-size: 0.85rem; font-weight: 600; transition: opacity 0.2s; flex: 1;
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-create { background: #3b82f6; color: #fff; width: 100%; padding: 12px; }
+.btn-home { background: #16a34a; color: #fff; }
+.btn-draw { background: #ca8a04; color: #fff; }
+.btn-away { background: #dc2626; color: #fff; }
+.btn-claim { background: #7c3aed; color: #fff; width: 100%; padding: 12px; margin-top: 8px; }
+
+.user-bet {
+  background: #1a1a1a; border-radius: 8px; padding: 12px; font-size: 0.85rem;
+}
+.claimed { color: #4ade80; margin-top: 8px; }
+
+.status-msg {
+  margin-top: 12px; padding: 8px 12px; background: #1a1a1a;
+  border-radius: 8px; font-size: 0.8rem; color: #aaa; word-break: break-all;
+}
