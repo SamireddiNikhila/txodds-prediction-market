@@ -148,11 +148,11 @@ As a smart contract auditor, the following security properties were explicitly d
 
 | TxODDS Fixture ID | Match |
 |---|---|
-| 17588245 | Croatia vs Ghana |
-| 17588391 | Colombia vs Portugal |
-| 17588325 | Jordan vs Argentina |
-| 17588402 | Panama vs England |
-| 18172379 | USA vs Bosnia & Herzegovina |
+| 18172280 | Netherlands vs Morocco |
+| 18172469 | Brazil vs Japan |
+| 18175397 | Ivory Coast vs Norway |
+| 18175918 | Argentina vs Cape Verde |
+| 18175981 | France vs Sweden |
 
 ##  License
 
