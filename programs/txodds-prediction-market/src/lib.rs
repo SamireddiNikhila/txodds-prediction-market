@@ -46,4 +46,21 @@ pub mod txodds_prediction_market {
     ) -> Result<()> {
         claim_winnings_handler(ctx, match_id)
     }
+
+    pub fn resolve_with_proof(
+        ctx: Context<ResolveWithProof>,
+        match_id: String,
+        ts: i64,
+        fixture_summary: ScoresBatchSummary,
+        fixture_proof: Vec<ProofNode>,
+        main_tree_proof: Vec<ProofNode>,
+        home_stat: StatTerm,
+        away_stat: StatTerm,
+    ) -> Result<()> {
+        resolve_with_proof_handler(
+            ctx, match_id, ts,
+            fixture_summary, fixture_proof, main_tree_proof,
+            home_stat, away_stat
+        )
+    }
 }

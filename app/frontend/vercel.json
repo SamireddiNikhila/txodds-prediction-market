@@ -1,0 +1,1 @@
+{"buildCommand":"craco build","outputDirectory":"build","installCommand":"yarn install --ignore-engines"}
