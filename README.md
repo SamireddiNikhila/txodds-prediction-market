@@ -157,3 +157,24 @@ As a smart contract auditor, the following security properties were explicitly d
 ##  License
 
 MIT
+
+## 🔐 Trustless Resolution via TxLINE validateStat
+
+The verified keeper (`app/keeper_verified.ts`) implements trustless market resolution using TxLINE's cryptographic Merkle proofs:
+
+1. Fetches score snapshot from `/api/scores/snapshot/{fixtureId}`
+2. Fetches three-stage Merkle proof from `/api/scores/stat-validation`
+3. Calls TxLINE's `validateStat` instruction on-chain to verify home goals > away goals (or vice versa) against the on-chain Merkle root — **no trust in the keeper required**
+4. Only if validation passes, calls `resolve_market` on our program
+
+This means market resolution is cryptographically verified against TxLINE's on-chain data anchored on Solana — fully trustless, no admin can post a fake result.
+
+### TxLINE Endpoints Used
+
+| Endpoint | Purpose |
+|---|---|
+| `/api/fixtures/snapshot` | Fetch World Cup fixture list |
+| `/api/scores/snapshot/{fixtureId}` | Get latest score + game state |
+| `/api/scores/historical/{fixtureId}` | Get full score history |
+| `/api/scores/stat-validation` | Fetch Merkle proof for on-chain validation |
+| TxLINE `validateStat` ix | On-chain cryptographic verification |
