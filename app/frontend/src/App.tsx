@@ -15,11 +15,11 @@ const BET_SEED = "bet";
 const VAULT_SEED = "vault";
 
 const FIXTURES = [
-  { id: "17588245", home: "Croatia", away: "Ghana" },
-  { id: "17588391", home: "Colombia", away: "Portugal" },
-  { id: "17588325", home: "Jordan", away: "Argentina" },
-  { id: "17588402", home: "Panama", away: "England" },
-  { id: "18172379", home: "USA", away: "Bosnia & Herzegovina" },
+  { id: "18172280", home: "Netherlands", away: "Morocco" },
+  { id: "18172469", home: "Brazil", away: "Japan" },
+  { id: "18175397", home: "Ivory Coast", away: "Norway" },
+  { id: "18175918", home: "Argentina", away: "Cape Verde" },
+  { id: "18175981", home: "France", away: "Sweden" },
 ];
 
 function MarketCard({ fixture, program, wallet }: any) {
