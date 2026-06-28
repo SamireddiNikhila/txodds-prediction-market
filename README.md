@@ -158,7 +158,7 @@ As a smart contract auditor, the following security properties were explicitly d
 
 MIT
 
-## 🔐 Trustless Resolution via TxLINE validateStat
+##  Trustless Resolution via TxLINE validateStat
 
 The verified keeper (`app/keeper_verified.ts`) implements trustless market resolution using TxLINE's cryptographic Merkle proofs:
 
